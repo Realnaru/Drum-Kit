@@ -14,6 +14,7 @@ document.addEventListener("keydown", function(event) {
   animateButton(event.key);
 });
 
+//making sounds depending of key value
 function makeSound(key) {
 
   switch (key) {
@@ -45,6 +46,7 @@ function makeSound(key) {
   }
 }
 
+//animate button by adding and removing .pressed class
 function animateButton(keyPressed) {
   if (isProperKey(keyPressed)) {
   document.querySelector("." + keyPressed).classList.add("pressed");
@@ -56,6 +58,7 @@ function animateButton(keyPressed) {
   }}, 100);
 }
 
+//check if pressed key is valid to avoid errors in console
 function isProperKey(keyPressed) {
   if (keyPressed === "w" || keyPressed === "a" || keyPressed === "s" ||
       keyPressed === "d" || keyPressed === "j" || keyPressed === "k" ||
